@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Section</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            /* background-color: #c91515;*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            text-align: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .help-box {
+            margin-top: 20px;
+        }
+        
+        .help-text {
+            width: 90%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            color: #333;
+            background-color: #f9f9f9;
+            resize: none;
+        }
+        
+        .help-text:focus {
+            border-color: #66afe9;
+            outline: none;
+            background-color: #fff;
+        }
+        
+    </style>
+    <script>
+        function clearText() {
+            var textArea = document.getElementById("helpText");
+            if (textArea.value === "Share your problem here") {
+                textArea.value = "";
+            }
+        }
+        
+        function restoreText() {
+            var textArea = document.getElementById("helpText");
+            if (textArea.value === "") {
+                textArea.value = "Share your problem here";
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>How can I help you?</h1>
+        <div class="help-box">
+            <textarea id="helpText" class="help-text" onfocus="clearText()" onblur="restoreText()">Share your problem here</textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
