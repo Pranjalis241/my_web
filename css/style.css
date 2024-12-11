@@ -58,7 +58,7 @@ body {
 
 /* Banner Section */
 .banner {
-    background: url('/images/bg3.jpg') no-repeat center center/cover; /* Replace with your banner image */
+    background: url('images/bg3.jpg') no-repeat center center/cover; /* Replace with your banner image */
     height: 190px;
     display: flex;
     align-items: center;
