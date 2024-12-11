@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Table</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      
+        <div class="content">
+            <div class="blocks">
+                <div class="block" id="ai" onmouseover="updateContent('Welcome to AI. AI can eliminate manual errors in data processing, analytics, assembly in manufacturing, and other tasks through automation and algorithms that follow the same processes every single time.AI can solve many problems by intelligently searching through many possible solutions.[68] There are two very different kinds of search used in AI: state space search and local search.AI is accomplished by studying the patterns of the human brain and by analyzing the cognitive process.', 'ai')">AI</div>
+                <div class="block" id="genAI" onmouseover="updateContent('Welcome to Gen AI guys. GenAI uses large AI models called foundation models to perform tasks like summarization, classification, and Q&A.These models can be adapted for specific use cases with minimal training.Generative AI starts with a prompt that could be in the form of a text, an image, a video, a design, musical notes, or any input that the AI system can process. Various AI algorithms then return new content in response to the prompt. ', 'genAI')">Gen AI</div>
+                <div class="block" id="llm" onmouseover="updateContent('Welcome to LLM. A large language model (LLM) is a type of artificial intelligence (AI) that excels at processing, understanding, and generating human language. LLMs are useful for analyzing, summarizing, and creating content across many industries.LLMs can be used for many tasks, including: Generating and translating text, Performing natural language processing (NLP) tasks, Analyzing and summarizing content, and Creating content', 'llm')">LLM</div>
+                <div class="block" id="dl" onmouseover="updateContent('Welcome to Deep Learning.Deep learning is an artificial intelligence (AI) method that teaches computers to process data in a way inspired by the human brain. Deep learning models can recognize complex pictures,text,sounds, & other data patterns to produce accurate insights.The main applications of deep learning AI can be divided into computer vision, natural language processing (NLP), and reinforcement learning. ', 'dl')">DL</div>
+                <div class="block" id="copilot" onmouseover="updateContent('Welcome to Copilot.AI copilots use natural language processing (NLP) and machine learning (ML) to craft intelligent responses. They are built on language models that are trained on large amounts of text and code.Copilot uses only the single chat thread as source content for responses.Copilot can help you draft replies, summarize email threads, and manage your calendar effectively', 'copilot')">Copilot</div>
+            </div>
+            <div class="display-box" id="display-box">
+                Welcome to AI !!!
+            </div>
+        </div>
+        <button class="submit">Submit</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+    .container {
+        margin: 20px;
+        width: 100%;
+        text-align: center;
+       /* border: 2px solid black;
+        padding: 20px;
+        background-image:url("images/shades-of-grey.jpg");*/
+    }
+    
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 2px solid black;
+    }
+    
+    .menu span {
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family:cursive;
+    }
+    
+    .blocks {
+        display: flex;
+        justify-content: center;
+        gap: 2px;
+        margin-bottom: 2px;
+    }
+    
+    .block {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border: 2px solid black;
+        background-color: #cce7ff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        
+    }
+    
+    .block:hover {
+        background-color: #007bff;
+        color: white;
+    }
+    
+    .display-box {
+        width: 50%;
+        height: auto;
+        line-height: 1.5;
+        border: 2px solid black;
+        margin-bottom: 20px;
+        font-size: 16px;
+        background-color: #f0f0f0;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        padding: 10px;
+    }
+    
+    .submit {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .submit:hover {
+        background-color: #0056b3;
+    }
+    
+</style>
+<script>
+    function updateContent(content, id) {
+        const displayBox = document.getElementById("display-box");
+        displayBox.textContent = content;
+    }
+    
+</script>

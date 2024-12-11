@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pacifico&display=swap');
+      form {
+        border: 2px solid #000; /* Black border */
+        padding: 20px;          /* Space inside the border */
+        width: 1000px;           /* Fixed width for the form */
+        background-color: #f8f6f6; /* Light background color */
+        border-radius: 10px;    /* Rounded corners */
+        box-shadow: 5px 5px 10px rgba(15, 15, 15, 0.2); /* Shadow effect */
+      
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+      h2{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <center>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+        <!-- Gender -->
+        <label for="gender">Gender:</label><br />
+        <input type="radio" id="male" name="gender" value="Male" />
+        <label for="male">Male</label><br />
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label><br />
+        <input type="radio" id="other" name="gender" value="Other" />
+        <label for="other">Other</label><br /><br />
+        <!-- Course Selection -->
+        <label for="course">Select Course:</label>
+        <select id="course" name="course">
+          <option value="java">Java</option>
+          <option value="python">Python</option>
+          <option value="c++">C++</option></select
+        ><br /><br />
+        <!-- Hobbies -->
+        <label for="hobbies">Hobbies:</label><br />
+        <input type="checkbox" id="music" name="hobbies" value="Music" />
+        <label for="music">Music</label><br />
+        <input type="checkbox" id="dance" name="hobbies" value="Dance" />
+        <label for="dance">Dance</label><br />
+        <input type="checkbox" id="reading" name="hobbies" value="Reading" />
+        <label for="reading">Reading</label><br /><br />
+
+        <input type="submit" value="Register" />
+      </form>
+    </center>
+  </body>
+</html>

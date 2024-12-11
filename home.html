@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oleo+Script:wght@400;700&family=Pacifico&display=swap");
+
+      .content {
+        text-align: center; /* Center aligns content horizontally */
+        margin-top: 0px;
+      }
+
+      h1 {
+        font-size: 50px; /* Adjusts font size for responsiveness */
+        font-family: "Oleo Script", system-ui;
+        font-weight: 400;
+        margin-bottom: 0px; /* Space between heading and video */
+        text-shadow: 2px 2px 10px rgb(2, 4, 121);
+      }
+
+      video {
+        max-width: 100%; /* Makes the video responsive */
+        height: 200px; /* Maintains aspect ratio */
+        border: 2px solid #000; /* Optional: adds border to the video */
+        box-shadow: 2px 2px rgba(175, 24, 24, 0.1); /* Optional: adds shadow */
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1><b>Welcome to Live Virtual Class!</b></h1>
+
+      <video controls>
+        <source src="eye.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </body>
+</html>

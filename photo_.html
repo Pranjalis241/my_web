@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo and Video Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .photo {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+
+        .video-container {
+            position: relative;
+        }
+
+        .video-frame {
+            display: none; /* Initially hide the video iframe */
+            border: 10px solid #ddd;
+            width: 320px;
+            height: 180px;
+        }
+
+        .message {
+            color: gray;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h2>Photo and Video Gallery</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Photo</th>
+                <th>Video</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#" onclick="loadVideo(event, 'interview2.mp4', 'video-frame-amit', 'message-amit')">Amit</a></td>
+                <td>Software Engineer</td>
+                <td><img src="/images/Amit_.jpg" alt="Amit" class="photo"></td>
+                <td class="video-container">
+                    <p id="message-amit" class="message">Click on the name to view the video</p>
+                    <iframe id="video-frame-amit" class="video-frame"></iframe>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="loadVideo(event, 'interview3.mp4', 'video-frame-rahul', 'message-rahul')">Rahul</a></td>
+                <td>Product Manager</td>
+                <td><img src="/images/rahul_.jpg" alt="Rahul" class="photo"></td>
+                <td class="video-container">
+                    <p id="message-rahul" class="message">Click on the name to view the video</p>
+                    <iframe id="video-frame-rahul" class="video-frame"></iframe>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="loadVideo(event, 'interview.mp4', 'video-frame-shreya', 'message-shreya')">Shreya</a></td>
+                <td>Data Scientist</td>
+                <td><img src="/images/shreya.jpg" alt="Shreya" class="photo"></td>
+                <td class="video-container">
+                    <p id="message-shreya" class="message">Click on the name to view the video</p>
+                    <iframe id="video-frame-shreya" class="video-frame"></iframe>
+                </td>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="loadVideo(event, 'interview4.mp4', 'video-frame-naman', 'message-naman')">Naman</a></td>
+                <td>UI/UX Designer</td>
+                <td><img src="/images/naman.jpg" alt="Naman" class="photo"></td>
+                <td class="video-container">
+                    <p id="message-naman" class="message">Click on the name to view the video</p>
+                    <iframe id="video-frame-naman" class="video-frame"></iframe>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function loadVideo(event, videoUrl, frameId, messageId) {
+            event.preventDefault(); // Prevent the default link behavior
+            
+            // Hide all messages and video frames
+            document.querySelectorAll('.message').forEach(msg => msg.style.display = 'block');
+            document.querySelectorAll('.video-frame').forEach(frame => frame.style.display = 'none');
+            
+            // Update the specific video frame and hide the message
+            const videoFrame = document.getElementById(frameId);
+            const message = document.getElementById(messageId);
+            
+            videoFrame.src = videoUrl; // Set the video URL
+            videoFrame.style.display = "block"; // Make the iframe visible
+            message.style.display = "none"; // Hide the message
+        }
+    </script>
+</body>
+</html>
