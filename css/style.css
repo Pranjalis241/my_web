@@ -10,6 +10,7 @@ body {
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
     background-position: center;
     overflow-x: hidden;
+    background-image: linear-gradient(black,white);
 }
 
 /* .content {
