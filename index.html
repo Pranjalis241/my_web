@@ -104,10 +104,10 @@
         </main> -->
       <!-- </div> -->
       <!-- Footer with Courses and Developer Info -->
-      <div class="foot">
-        <footer>
-          <div class="course-list">
-            <!-- <div class="line"></div> -->
+      <!-- <div class="foot"> -->
+
+          <!-- <div class="course-list">
+             <div class="line"></div> 
             <div class="courses1">
               <div class="moving-text1">
                 <p>Most important courses:</p>
@@ -116,14 +116,90 @@
                 <a href="gen-ai.html" target="content-frame">Gen AI</a>
               </div>
             </div>
-            <!-- <div class="line"></div> -->
-          </div>
+             <div class="line"></div>
+          </div> -->
+  <footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <div class="custom-background">
+      <div class="container my-5">
+        <h3 class="text-center mb-4">Most Important Courses for the Professional:</h3>
+        <div class="row">
+            <!-- MERN Stack Card -->
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <!-- <i class="bi bi-laptop" style="font-size: 2rem;"></i> -->
+                            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                        </div>
+                        <h5 class="card-title">MERN Stack</h5>
+                        <p class="card-text">Learn full-stack web development using MongoDB, Express, React, and NodeJS.</p>
+                        <a href="mern-stack.html" target="content-frame" class="btn btn-primary">Explore MERN Stack</a>
+                    </div>
+                </div>
+            </div>
+            <!-- MEAN Stack Card -->
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <!-- <i class="bi bi-code-slash" style="font-size: 2rem;"></i> -->
+                            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                        </div>
+                        <h5 class="card-title">MEAN Stack</h5>
+                        <p class="card-text">Master the MEAN Stack (MongoDB, Express, Angular, NodeJS) for modern web apps.</p>
+                        <a href="mean-stack.html" target="content-frame" class="btn btn-primary">Explore MEAN Stack</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Gen AI Card -->
+            <div class="col-md-4">
+                <div class="card text-center shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <!-- <i class="bi bi-robot" style="font-size: 2rem;"></i> -->
+                            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+                        </div>
+                        <h5 class="card-title">Gen AI</h5>
+                        <p class="card-text">Dive into Generative AI and learn the latest technologies transforming industries.</p>
+                        <a href="gen-ai.html" target="content-frame" class="btn btn-primary">Explore Gen AI</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+  
+   
+      </div>
           <div class="developer1">
             <p>Website Designed & Developed By: Pranjali Singh</p>
           </div>
-        </footer>
+       
       </div>
     </div>
+</footer>
+
+
+
+    
+    <style>
+      .custom-background {
+          background-image: url(''); /* Replace with your image URL */
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          padding: 0px 0;
+      }
+      .card {
+          background-color: rgba(236, 152, 152, 0.8); /* Semi-transparent white for contrast */
+          border: none;
+      }
+  </style>
+    
     <script>
       function navigateToCourses(event) {
         // Prevent default behavior of the dropdown toggle
