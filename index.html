@@ -125,8 +125,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <div class="custom-background">
-      <div class="container my-5">
-        <h3 class="text-center mb-4">Most Important Courses for the Professional:</h3>
+      <div class="container my-3">
+        <h3 class="text-center mb-4"><strong>Important</strong> Courses for the Professional:</h3>
         <div class="row">
             <!-- MERN Stack Card -->
             <div class="col-md-4">
@@ -136,7 +136,7 @@
                             <!-- <i class="bi bi-laptop" style="font-size: 2rem;"></i> -->
                             <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
                         </div>
-                        <h5 class="card-title">MERN Stack</h5>
+                        <h5 class="card-title"> <strong> MERN Stack</strong></h5>
                         <p class="card-text">Learn full-stack web development using MongoDB, Express, React, and NodeJS.</p>
                         <a href="mern-stack.html" target="content-frame" class="btn btn-primary">Explore MERN Stack</a>
                     </div>
@@ -150,8 +150,8 @@
                             <!-- <i class="bi bi-code-slash" style="font-size: 2rem;"></i> -->
                             <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
                         </div>
-                        <h5 class="card-title">MEAN Stack</h5>
-                        <p class="card-text">Master the MEAN Stack (MongoDB, Express, Angular, NodeJS) for modern web apps.</p>
+                        <h5 class="card-title"><strong> MEAN Stack </strong></h5>
+                        <p class="card-text">Master the MEAN Stack (MongoDB,Angular,NodeJS) for apps.</p>
                         <a href="mean-stack.html" target="content-frame" class="btn btn-primary">Explore MEAN Stack</a>
                     </div>
                 </div>
@@ -164,8 +164,8 @@
                             <!-- <i class="bi bi-robot" style="font-size: 2rem;"></i> -->
                             <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
                         </div>
-                        <h5 class="card-title">Gen AI</h5>
-                        <p class="card-text">Dive into Generative AI and learn the latest technologies transforming industries.</p>
+                        <h5 class="card-title"> <strong>Gen AI</strong></h5>
+                        <p class="card-text">Dive into Generative AI & learn the latest technology transforming industry.</p>
                         <a href="gen-ai.html" target="content-frame" class="btn btn-primary">Explore Gen AI</a>
                     </div>
                 </div>
@@ -188,7 +188,6 @@
     
     <style>
       .custom-background {
-          background-image: url(''); /* Replace with your image URL */
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
@@ -197,7 +196,13 @@
       .card {
           background-color: rgba(236, 152, 152, 0.8); /* Semi-transparent white for contrast */
           border: none;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       }
+      .card:hover {
+            transform: scale(1.1); /* Expands the card */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        }
+        
   </style>
     
     <script>
