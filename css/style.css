@@ -10,7 +10,7 @@ body {
     background-attachment: fixed; /* Keeps the background fixed while scrolling */
     background-position: center;
     overflow-x: hidden;
-    background-image: linear-gradient(rgb(26, 25, 25),white);
+    background-image: linear-gradient(white,rgb(194, 200, 206));
 }
 
 .navdrop{
@@ -65,7 +65,7 @@ body {
 
 /* Banner Section */
 .banner1 {
-    background: url('../images/designlow.jpg') no-repeat center center/cover; /* Replace with your banner image */
+    background: url('/images/Cover_LowQuality.jpg') no-repeat center center/cover; /* Replace with your banner image */
     height: 190px;
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@ body {
   
 header{
     /* position: relative; */
-    background-color: rgb(150, 147, 147); /* Matches the navbar background */
+    background-color: rgb(59, 55, 55); /* Matches the navbar background */
     position: relative;
     z-index: 1;
 }
@@ -108,7 +108,7 @@ nav {
     font-family:fantasy;
     font-size: 21px;
     border-bottom: 1px solid black;
-    background-color: rgb(199, 197, 197);
+    background-color: rgb(182, 178, 178);
     position: relative;
   
 }
@@ -135,7 +135,7 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: #a0a6aa;
+    background-color: #6897ee;
 }
 
 .course-list a:hover{
@@ -151,7 +151,7 @@ footer {
     height: 75px;
     position: relative; */
     padding-top: 0%;
-    background-color: #b9c0c0; /* Solid grey */
+    background-color: #8e9191; /* Solid grey */
    /* Adjusts to content height */
     padding: 0px 0; /*Adds padding for spacing */
     text-align: center;
@@ -202,14 +202,30 @@ footer {
     width: 100%;
     margin: 10px auto;
 }
-.moving-text1 {
+.moving-text1{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moving-text2 {
     display: inline-block;
-    animation: move-horizontal 15s linear infinite;
+    animation: typing 3s steps(18) infinite;
     font-weight: bold;
-    color: #333;
+    color:black;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 150px;
+   
   }
-  
-  @keyframes move-horizontal {
+  @keyframes typing {
+    from{
+        width: 0
+    }
+    
+  }
+  /* @keyframes move-horizontal {
     0% {
       transform: translateX(100%);
     }
@@ -221,7 +237,7 @@ footer {
     .moving-text1 {
       font-size: 14px;
     }
-  }
+  } */
 
 
 .developer1 {

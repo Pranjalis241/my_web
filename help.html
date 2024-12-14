@@ -66,6 +66,19 @@
         }
         
     </style>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>How can I help you?</h1>
+        <div class="help-box">
+            <textarea id="helpText" class="help-text" onfocus="clearText()" onblur="restoreText()">Share your problem here</textarea>
+        </div>
+        <button type="submit">Submit</button>
+        
+    </div>
+
+  
     <script>
         function clearText() {
             var textArea = document.getElementById("helpText");
@@ -82,17 +95,5 @@
         }
         
     </script>
-</head>
-<body>
-    <div class="container">
-        <h1>How can I help you?</h1>
-        <div class="help-box">
-            <textarea id="helpText" class="help-text" onfocus="clearText()" onblur="restoreText()">Share your problem here</textarea>
-        </div>
-        <button type="submit">Submit</button>
-        
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>

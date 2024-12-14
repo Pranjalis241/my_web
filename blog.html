@@ -23,7 +23,13 @@
         </div>
         <!-- <button class="submit">Submit</button> -->
     </div>
-    <script src="script.js"></script>
+    <script>
+        function updateContent(content, id) {
+            const displayBox = document.getElementById("display-box");
+            displayBox.textContent = content;
+        }
+        
+    </script>
 </body>
 </html>
 <style>
@@ -39,25 +45,15 @@
     
     .container {
         margin: 20px;
-        width: 1700px;
+        width: 100%;
+      
         text-align: center;
        /* border: 2px solid black;
         padding: 20px;
         background-image:url("images/shades-of-grey.jpg");*/
     }
     
-    .menu {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        padding: 10px;
-        border-bottom: 2px solid black;
-    }
-    
-    .menu span {
-        cursor: pointer;
-        padding: 5px 10px;
-    }
+  
     
     .content {
         display: flex;
@@ -68,9 +64,10 @@
     
     .blocks {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 2px;
-        margin-bottom: 2px;
+        gap: 5px;
+        margin-bottom: 20px;
     }
     
     .block {
@@ -104,25 +101,30 @@
         padding: 10px;
     }
     
-    .submit {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+      /* Responsive Styles */
+      @media screen and (max-width: 768px) {
+        .block {
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+
+        .display-box {
+            width: 90%;
+        }
     }
-    
-    .submit:hover {
-        background-color: #0056b3;
+    @media screen and (max-width: 480px) {
+        .block {
+            width: 100px;
+            height: 35px;
+            line-height: 35px;
+            font-size: 12px;
+        }
+
+        .display-box {
+            font-size: 14px;
+        }
     }
     
 </style>
-<script>
-    function updateContent(content, id) {
-        const displayBox = document.getElementById("display-box");
-        displayBox.textContent = content;
-    }
-    
-</script>
