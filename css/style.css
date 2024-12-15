@@ -65,7 +65,7 @@ body {
 
 /* Banner Section */
 .banner1 {
-    background: url('../images/Cover_LowQuality.jpg') no-repeat center center/cover; /* Replace with your banner image */
+    background: url('../images/Cover_LowQuality2.jpg') no-repeat center center/cover; /* Replace with your banner image */
     height: 190px;
     display: flex;
     align-items: center;
@@ -202,29 +202,7 @@ footer {
     width: 100%;
     margin: 10px auto;
 }
-.moving-text1{
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.moving-text2 {
-    display: inline-block;
-    animation: typing 3s steps(18) infinite;
-    font-weight: bold;
-    color:black;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-    width: 150px;
-   
-  }
-  @keyframes typing {
-    from{
-        width: 0
-    }
-    
-  }
+
   /* @keyframes move-horizontal {
     0% {
       transform: translateX(100%);
