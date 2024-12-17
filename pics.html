@@ -1,134 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styling for cards */
+        .course-card {
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        .course-title {
+            color: #008aff;
+            font-weight: bold;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-   
- 
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
-<section class="blog" id="blog" style="margin-bottom: 30px;">
-    <div class="container">
-      <div class="row row_post_1">
-        <div class="post_1">
-          <div class="col-lg-7 feature_image_1">
-            <!-- <img src="img/assets/feature_1.png" alt="feature-1"> -->
-          </div>
+        /* Adjust the width of the carousel */
+#carouselExampleIndicators {
+    width: 50%; /* Set the desired width (e.g., 80% of the container) */
+    margin: 0 auto; /* Center it horizontally */
+  }
   
-          <div class="col-lg-5 article_1">
-            <img src="images/naman.jpg" alt="blog_1_icon.png">
-            <div class="post">
-              <h3>John</h3>
-              <p>User centered design actionable insight <br/>convergence pitch deck iterate unicorn food-truck<br/> innovate earned media. User centered design<br/> actionable insight convergence pitch deck iterate<br/> unicorn food-truck innovate earned
-                media. </p>
+  /* Adjust the size of images inside the carousel */
+  #carouselExampleIndicators .carousel-inner img {
+    max-height: 400px; /* Set a max height for the images */
+    object-fit: cover; /* Ensure the images are properly cropped */
+  }
+  /* Optional: Limit the image height */
+img {
+    max-height: 300px; /* Adjust this value based on your preference */
+    object-fit: cover; /* Ensure the images scale proportionally */
+  }
+
+.container {
+    margin-top: 20px;  /* Add top margin to separate from the rest of the page */
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  
+        
+    </style>
+</head>
+<body>
+    
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Carousel</title>
+        <link href=
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+              rel="stylesheet">
+    </head>
+    
+    <body >
+    
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 text-center ">
+                    <h1 >
+                         Responsive Carousel in Bootstrap 5
+                      </h1>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-  
-      <div class="row row_post_2">
-        <div class="col-lg-5 article_2">
-          <img src="images/rahul_.jpg" alt="blog_1_icon.png">
-          <div class="post_second">
-            <h3>James</h3>
-            <p>User centered design actionable insight <br/>convergence pitch deck iterate unicorn food-truck<br/> innovate earned media. User centered design<br/> actionable insight convergence pitch deck iterate<br/> unicorn food-truck innovate earned media.
-            </p>
-          </div>
+    
+    
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div id="carouselExampleIndicators" 
+                         class="carousel slide" 
+                         data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src=
+    "https://media.geeksforgeeks.org/wp-content/uploads/20240308154939/html-(1).jpg"
+                                    class="d-block w-100" 
+                                     alt="Slide 1">
+                            </div>
+    
+                            <div class="carousel-item">
+                                <img src=
+    "https://media.geeksforgeeks.org/wp-content/uploads/20240308154940/js-(1).jpg"
+                                    class="d-block w-100" 
+                                     alt="Slide 2">
+                            </div>
+    
+                            <div class="carousel-item">
+                                <img src=
+    "https://media.geeksforgeeks.org/wp-content/uploads/20240308154942/web-(1).jpg"
+                                    class="d-block w-100" 
+                                     alt="Slide 4">
+                            </div>
+    
+                            <div class="carousel-item">
+                                <img src=
+    "https://media.geeksforgeeks.org/wp-content/uploads/20240308154945/web2-(1).jpg"
+                                    class="d-block w-100" 
+                                     alt="Slide 3">
+                            </div>
+    
+    
+                        </div>
+                        <button class="carousel-control-prev" 
+                                type="button" 
+                                data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" 
+                                  aria-hidden="true">
+                              </span>
+                            <span class="visually-hidden">
+                                  Previous
+                              </span>
+                        </button>
+                        <button class="carousel-control-next" type="button" 
+                                data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" 
+                                  aria-hidden="true">
+                              </span>
+                            <span class="visually-hidden">
+                                  Next
+                              </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-  
-        <div class="post_1">
-          <div class="col-lg-7 feature_image_2">
-            <!-- <img src="img/assets/feature_1.png" alt="feature-1"> -->
-          </div>
+        
+    
+        <!-- Bootstrap Bundle with Popper -->
+        <script src=
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+          </script>
+          <!-- Gallery -->
+         
+            
+          <div class="container">
+            <div class="row justify-content-center mx-auto">
+                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Boat on Calm Water"
+                    />
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Wintry Mountain Landscape"
+                    />
+                </div>
+        
+                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Mountains in the Clouds"
+                    />
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Boat on Calm Water"
+                    />
+                </div>
+        
+                <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Waves at Sea"
+                    />
+                    <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Yosemite National Park"
+                    />
+                </div>
+            </div>
         </div>
-      </div>
+        
+
+  <!-- Gallery -->
+    
+    </body>
+    
+    </html>
+
+
+    <!-- Main Container -->
+    <div class="container mt-5">
+
+        <!-- Row 1 -->
+        <div class="row align-items-center mb-4">
+            <!-- Image -->
+            <div class="col-md-6 image-container">
+                <img src="images/shreya.jpg" alt="Online Courses" class="img-fluid">
+            </div>
+            <!-- Text Content -->
+            <div class="col-md-6">
+                <div class="course-card">
+                    <h2 class="course-title">Shreya</h2>
+                    <p>
+                        "Hello everyone! My name is Shreya,I am delighted to be part of this amazing team. I work as a Data Scientist. Every day brings new challenges and opportunities to grow, and I truly enjoy collaborating with such talented and supportive colleagues. I believe in approaching work with a smile and positivity because when you love what you do, it never feels like a chore.Let's make great things happen together!"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-md-6 order-md-2">
+                <div class="course-card">
+                    <h2 class="course-title">John</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dapibus
+                        urna in nunc tincidunt consequat.
+                    </p>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="col-md-6 order-md-1 image-container">
+                <img src="images/naman.jpg" alt="In Class Courses" class="img-fluid">
+            </div>
+        </div>
+
     </div>
-  </section>
-  <style>
-    .article_1, .article_2{
-        display: inline;
-    }
-    .post {
-        background: #FFFFFF;
-        padding: 40px 40px 40px 60px;
-        margin-left: -100px;
-        text-align: left;
-        box-shadow: 2px 2px 10px #888888;
-      }
-      
-      .post h3 {
-        color: #1EBAFD;
-        font-family: 'product_sansbold';
-        font-size: 52px;
-        line-height: 62px;
-      }
-      
-      .post p {
-        font-family: 'Source Sans Pro';
-        font-size: 20px;
-        color: #4C4C4C;
-        line-height: 42px;
-      }
-      
-      .post_second {
-        background: #FFFFFF;
-        padding: 40px 40px 40px 60px;
-        margin-left: 0px;
-        margin-right: -100px;
-        text-align: left;
-        box-shadow: 2px 2px 10px #888888;
-        z-index: 9999;
-      }
-      
-      .post_second h3 {
-        color: #1EBAFD;
-        font-family: 'product_sansbold';
-        font-size: 52px;
-        line-height: 62px;
-      }
-      
-      .post_second p {
-        font-family: 'Source Sans Pro';
-        font-size: 20px;
-        color: #4C4C4C;
-        line-height: 42px;
-      }
-      
-      .row_post_1 {
-        margin-bottom: 30px;
-      }
-      
-      .row_post_2 {
-        margin-top: 30px;
-      }
-      .row_post_1,.row_post_2{
-        display: inline;
-      }
-      
-      .post_1 {
-        margin-bottom: 30px;
-      }
-      
-      .feature_image_1 img {
-        width: 100%;
-        height: 500px;
-      }
-      
-      .feature_image_2 img {
-        width: 100%;
-        height: 500px;
-        z-index: -999;
-        position: absolute;
-        margin-left: -28px;
-      }
-      
-      .article_1 img {
-        width: 240px;
-        height: 200px;
-        margin-left: -27px;
-      }
-      
-      .article_2 img {
-        width: 240px;
-        height: 200px;
-        margin-left: 48%;
-      }
-      
-      
-  </style>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

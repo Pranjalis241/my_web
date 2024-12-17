@@ -25,6 +25,7 @@ body {
     align-items: center;
     overflow: hidden;
 }
+
 /* Styling for Iframe */
 /* .content {
     flex: 1;
@@ -85,7 +86,7 @@ header{
     z-index: 1;
 }
 
-h1{ font-size: 60px;
+h1{ font-size: 40px;
     font-weight: bold;
     text-shadow: 5px 2px 10px rgba(22, 158, 158, 1);
     animation: zoomInOut 3s infinite ease-in-out;
@@ -101,7 +102,9 @@ h1{ font-size: 60px;
       transform: scale(1); /* Back to normal size */
     }
   }
-/* Navigation Bar */
+
+
+
 
 nav {
     border-top: 1px solid black;
@@ -221,8 +224,8 @@ footer {
 .developer1 {
     /* margin-top: 10px; */
     font-size: 16px;
-    color: #333;
-    background-color: #b8bec0;
+    color:white;
+    background-color: #121313;
 }
 
 /* Responsive Design */
@@ -257,7 +260,7 @@ footer {
         height: 150px;
     }
 
-    .banner1 h1 {
+    .banner1 h1{
         font-size: 2rem;
     }
 

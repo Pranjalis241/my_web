@@ -13,14 +13,88 @@
  
     
     <link rel="stylesheet" href="css\style.css" >
+
+    <style>
+      .custom-background {
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          padding: 0px 0;
+      }
+      .card {
+          background-color: rgba(236, 152, 152, 0.8); /* Semi-transparent white for contrast */
+          border: none;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+      .card:hover {
+            transform: scale(1.1); /* Expands the card */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+        }
+        .carousel img{
+          height: 40vh;
+        }
+
+  </style>
+    
   </head>
   <body>
     <div class="container1">
       <!-- Header with Banner and Navbar -->
       <header>
-        <div class="banner1">
+        <!-- <div class="banner1">
           <h1 class="zoom">LIVE VIRTUAL CLASS</h1>
+        </div> -->
+      
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/images/Cover_LowQuality3.jpg" class="d-block w-100" alt="...">
+             
+              <div class="carousel-caption">
+                <h1>LIVE VIRTUAL CLASS</h1>
+               <br>
+               <br>
+              </div>
+            </div>
+            <div class="carousel-item">
+                <img src="/images/Untitled design (1).png" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <h1>EXPLORE NEW IDEAS</h1>
+                  <br>
+                <!-- <p>Some representative placeholder content for the second slide.</p> -->
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/images/banner-5250179 (1).jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <h1>LEARN NEW COURSES</h1>
+                <br>
+                <br>
+                
+                
+             
+                <!-- <p>Some representative placeholder content for the third slide.</p> -->
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+      
+
+
+
         <nav>
           <ul class="navbar1">
             <li><a href="home.html" target="content-frame">Home</a></li>
@@ -172,33 +246,17 @@
         
         </div>
       </div>
-          <div class="developer1">
+          <div class="developer1" style="padding: 10px;">
             <p>Website Designed & Developed By: Pranjali Singh</p>
+            <p>Contact: abc@example.com | Phone : +1234567890 </p>
+            <p>Your Company Name. All Rights Reserved</p>
           </div>
       </div>
     </div>
 </footer>
 
     
-    <style>
-      .custom-background {
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-position: center;
-          padding: 0px 0;
-      }
-      .card {
-          background-color: rgba(236, 152, 152, 0.8); /* Semi-transparent white for contrast */
-          border: none;
-          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      }
-      .card:hover {
-            transform: scale(1.1); /* Expands the card */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
-        }
-        
-  </style>
-    
+ 
     <script>
       function navigateToCourses(event) {
         // Prevent default behavior of the dropdown toggle
