@@ -86,7 +86,20 @@
             const totalMarks = maths + english + computer;
             const percentage = (totalMarks / 300) * 100;
 
-            alert(`Your Name: ${name}\nTotal Marks: ${totalMarks}\nPercentage: ${percentage.toFixed(2)}%`);
+            let maxSubject = "Maths";
+            let maxMarks = maths;
+
+            if (english > maxMarks) {
+                maxMarks = english;
+                maxSubject = "English";
+            }
+
+            if (computer > maxMarks) {
+                maxMarks = computer;
+                maxSubject = "Computer";
+            }
+
+            alert(`Your Name: ${name}\nTotal Marks: ${totalMarks}\nPercentage: ${percentage.toFixed(2)}%\nYou got maximum marks in ${maxSubject} which is ${maxMarks}`);
         }
     </script>
 </body>

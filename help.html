@@ -15,10 +15,11 @@
         
         body {
             font-family: Arial, sans-serif;
-            /* background-color: #c91515;*/
+        
             display: flex;
             justify-content: center;
             align-items: center;
+             background-color: rgb(207, 211, 211); 
            
         }
         
@@ -49,7 +50,7 @@
             border: 2px solid #ccc;
             border-radius: 5px;
             color: #333;
-            background-color: #f9f9f9;
+            background-color: #f8f4f4;
             resize: none;
         }
         
@@ -121,9 +122,9 @@
 
         <h1>How can I help you?</h1>
         <div class="help-box">
-            <textarea id="helpText" class="help-text" onfocus="clearText()" onblur="restoreText()">Share your problem here</textarea>
+         <textarea id="helpText" class="help-text" onfocus="clearText()" onblur="restoreText()">Share your problem here</textarea>
         </div>
-        <button type="submit">Submit</button>
+        <button type="button" onclick="validateHelpForm()">Submit</button>
     </div>
     
 
@@ -145,7 +146,17 @@
                 textArea.value = "Share your problem here";
             }
         }
-        
+        function validateHelpForm() {
+            const helpText = document.getElementById("helpText").value.trim();
+
+            if (helpText === "" || helpText === "Share your problem here") {
+                alert("Please share your problem before submitting.");
+                return;
+            }
+
+            // Display success message on a new screen
+            document.body.innerHTML = "<div style='display: flex; justify-content: center; align-items: center; height: 100vh;'><h1>Form submitted successfully!</h1></div>";
+        }
     </script>
 </body>
 </html>
