@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Calculator</title>
+    <style>    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #9393d3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            width: 400px;
+            background-color: #faf9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px black;
+            text-align: center;
+        }
+        .form-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #131212;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+          
+            margin-bottom: 15px;
+            border: 1px solid #0e0d0d;
+            border-radius: 5px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Mark Calculator</h1>
+        <form id="marksForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="maths">Maths:</label>
+            <input type="number" id="maths" name="maths" placeholder="Marks in Maths" min="0" max="100" required>
+
+            <label for="english">English:</label>
+            <input type="number" id="english" name="english" placeholder="Marks in English" min="0" max="100" required>
+
+            <label for="computer">Computer:</label>
+            <input type="number" id="computer" name="computer" placeholder="Marks in Computer" min="0" max="100" required>
+
+            <button type="button" onclick="calculateMarks()">Calculations</button>
+        </form>
+    </div>
+
+    <script>
+        function calculateMarks() {
+            const name = document.getElementById('name').value;
+            const maths = parseInt(document.getElementById('maths').value) || 0;
+            const english = parseInt(document.getElementById('english').value) || 0;
+            const computer = parseInt(document.getElementById('computer').value) || 0;
+
+            const totalMarks = maths + english + computer;
+            const percentage = (totalMarks / 300) * 100;
+
+            alert(`Your Name: ${name}\nTotal Marks: ${totalMarks}\nPercentage: ${percentage.toFixed(2)}%`);
+        }
+    </script>
+</body>
+</html>
