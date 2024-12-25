@@ -44,7 +44,7 @@ body::-webkit-scrollbar{
     border: none; 
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .iframe-content {
         height: 400px;
     }
@@ -54,7 +54,8 @@ body::-webkit-scrollbar{
     .iframe-content {
         height: 300px;
     }
-}
+} */
+ 
 /*-----------------------*/
 .container1 {
     width: 100%;
