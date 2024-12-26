@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        ul {
+            margin: 20px 0;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Scholarship Terms and Conditions</h2>
+    <ul>
+        <li>If 10th and 12th marks are ≥ 90%, you get a 50% scholarship.</li>
+        <li>If 10th and 12th marks are ≥ 80% but < 90%, you get a 25% scholarship.</li>
+        <li>If marks are below 80%, you do not qualify for a scholarship.</li>
+    </ul>
+    <button onclick="proceed()">OK</button>
+    <script>
+        function proceed() {
+           
+            //window.opener.location.href = "scholarship.html" ,target="content-frame"; // Load scholarship form in main window
+            window.close(); // Close the terms and conditions window
+        }
+    </script>
+</body>
+</html>

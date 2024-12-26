@@ -143,6 +143,9 @@
               >
             </li>
             <li>
+              <a href="scholarship.html" target="content-frame" onclick="openterms()">Scholarship</a>
+            </li>
+            <li>
               <a href="photo_.html" target="content-frame">Photo Gallery</a>
             </li>
             <li><a href="blog.html" target="content-frame">Blog</a></li>
@@ -238,7 +241,7 @@
                             <i class="fa-solid fa-graduation-cap fa-3x"></i>
                         </div>
                         <h5 class="card-title"> <strong>Gen AI</strong></h5>
-                        <p class="card-text">Dive into Generative AI & learn the latest technology transforming industry.</p>
+                        <p class="card-text">Dive into Gen AI & learn the latest technology transforming industry.</p>
                         <a href="gen-ai.html" 
                            target="content-frame" 
                            class="btn btn-primary" 
@@ -264,7 +267,7 @@
           </div>
       </div>
     </div>
-</footer>
+   </footer>
 
     
  
@@ -277,6 +280,15 @@
           iframe.src = "courses.html";
         }
       }
+      function openterms(){
+        const termsWindow = window.open(
+          "terms.html", 
+          "Terms", 
+          "width=500,height=300"
+      );
+
+      termsWindow.focus();
+      }
     </script>
-  </body>
+ </body>
 </html>
