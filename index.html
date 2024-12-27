@@ -289,6 +289,31 @@
 
       termsWindow.focus();
       }
+
+   
+
+
+     // Show the subscription prompt after 2 seconds
+  window.onload = function () {
+    setTimeout(function () {
+      // Show a prompt for the email
+      const email = prompt("Subscribe to our LVC! Enter your email address to stay updated:");
+      
+      // Check if the user entered an email
+      if (email) {
+        alert(`Thank you for subscribing with ${email}!`);
+      } else if (email === null) {
+        // User clicked "Cancel"
+        console.log("User cancelled the subscription prompt.");
+      } else {
+        // Empty input
+        alert("Please enter a valid email address to subscribe.");
+      }
+    }, 2000); // 2000ms = 2 seconds
+  };
+
+
+
     </script>
  </body>
 </html>
