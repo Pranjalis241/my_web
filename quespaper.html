@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Examination</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    
+    }
+    .container {
+      width: 50%;
+      margin: auto;
+      border: 5px solid #000;
+      padding: 20px;
+      background-color: rgb(210, 191, 214);
+    }
+    h2 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    .correct {
+      color: rgb(6, 163, 6);
+      font-weight: bold;
+    }
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Online Examination</h2>
+    <p>2 Marks Each</p>
+    <form id="quizForm">
+      <div class="question">
+        <p>1. HTML is for creating:</p>
+        <label><input type="radio" name="q1" value="0"> Dynamic Page</label><br>
+        <label><input type="radio" name="q1" value="2"> Static Page</label><br>
+        <label><input type="radio" name="q1" value="0"> Both</label><br>
+        <label><input type="radio" name="q1" value="0"> None of the above</label><br>
+      </div>
+      <div class="question">
+        <p>2. CSS is used for:</p>
+        <label><input type="radio" name="q2" value="0"> Functionality</label><br>
+        <label><input type="radio" name="q2" value="2"> Styling</label><br>
+        <label><input type="radio" name="q2" value="0"> Backend</label><br>
+        <label><input type="radio" name="q2" value="0"> None of the above</label><br>
+      </div>
+      <div class="question">
+        <p>3. JavaScript is used for:</p>
+        <label><input type="radio" name="q3" value="2"> Dynamic Pages</label><br>
+        <label><input type="radio" name="q3" value="0"> Styling</label><br>
+        <label><input type="radio" name="q3" value="0"> Database</label><br>
+        <label><input type="radio" name="q3" value="0"> None of the above</label><br>
+      </div>
+      <div class="question">
+        <p>4. Python is:</p>
+        <label><input type="radio" name="q4" value="0"> Low-level language</label><br>
+        <label><input type="radio" name="q4" value="2"> High-level language</label><br>
+        <label><input type="radio" name="q4" value="0"> Assembly</label><br>
+        <label><input type="radio" name="q4" value="0"> None of the above</label><br>
+      </div>
+      <div class="question">
+        <p>5. SQL is used for:</p>
+        <label><input type="radio" name="q5" value="0"> Frontend</label><br>
+        <label><input type="radio" name="q5" value="2"> Database</label><br>
+        <label><input type="radio" name="q5" value="0"> Styling</label><br>
+        <label><input type="radio" name="q5" value="0"> None of the above</label><br>
+      </div>
+      <button type="button" class="btn" onclick="calculateMarks()">Your Marks</button>
+    </form>
+  </div>
+
+  <script>
+    function calculateMarks() {
+      const form = document.getElementById('quizForm');
+      const formData = new FormData(form);
+      let totalMarks = 0;
+
+      // Correct answers
+      const correctAnswers = {
+        q1: "2", 
+        q2: "2", 
+        q3: "2", 
+        q4: "2", 
+        q5: "2"  
+      };
+
+      // Loop through all questions
+      for (let [question, correctAnswer] of Object.entries(correctAnswers)) {
+        const options = form[question]; // Get all options for the current question
+
+        // Loop through each option
+        for (let option of options) {
+          // Clear previous styles
+          option.parentElement.classList.remove('correct', 'incorrect');
+
+          if (option.checked) {
+            // If the selected option is correct
+            if (option.value === correctAnswer) {
+              totalMarks += 2;
+            } else {
+              // If the selected option is wrong, mark it red
+              option.parentElement.classList.add('incorrect');
+            }
+          }
+
+          // Always highlight the correct answer in green
+          if (option.value === correctAnswer) {
+            option.parentElement.classList.add('correct');
+          }
+        }
+      }
+
+      // Display total marks in a popup
+      alert("You Got " + totalMarks + " Marks");
+    }
+  </script>
+</body>
+</html>

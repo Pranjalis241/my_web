@@ -53,3 +53,10 @@ button:hover {
     text-align: center;
     color: #333;
 }
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+

@@ -53,7 +53,7 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="images\Cover_LowQuality3.jpg" class="d-block w-100" alt="...">
+              <img src="images\finall.jpg" class="d-block w-100" alt="...">
              
               <div class="carousel-caption">
                 <h1>LIVE VIRTUAL CLASS</h1>
@@ -70,7 +70,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="images\banner-5250179 (1).jpg" class="d-block w-100" alt="...">
+              <img src="images\finalpic2.jpg.jpeg" class="d-block w-100" alt="...">
               <div class="carousel-caption">
                 <h1>LEARN NEW COURSES</h1>
                 <br>
@@ -149,6 +149,7 @@
               <a href="photo_.html" target="content-frame">Photo Gallery</a>
             </li>
             <li><a href="blog.html" target="content-frame">Blog</a></li>
+            <li><a href="quespaper.html" target="content-frame">Ques-Paper</a></li>
             <li><a href="help.html" target="content-frame">Help</a></li>
             <li>
               <a href="contact.html" target="content-frame">Contact Us</a>
@@ -259,15 +260,22 @@
       </div>
           <div class="developer1" style="padding: 15px;">
             <br>
-            
             <p>Website Designed & Developed By: Pranjali Singh</p>
             <p>Your Company Name. All Rights Reserved</p>
             <p>Follow us on :   <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-square-instagram"></i> <i class="fa-brands fa-linkedin"></i> </p>
-           
+           <br>
+           <label for="reference-websites">LVC Reference Websites: </label>
+           <select id="reference-websites" onchange="openWebsite(this.value)">
+             <option value="">-- Select a Website --</option>
+             <option value="https://www.google.com">Google</option>
+             <option value="https://www.wikipedia.org">Wikipedia</option>
+             <option value="https://www.w3schools.com">W3 Schools</option>
+             <option value="https://www.testbook.com">Testbook</option>
+           </select>
           </div>
       </div>
     </div>
-   </footer>
+  </footer>
 
     
  
@@ -280,6 +288,13 @@
           iframe.src = "courses.html";
         }
       }
+
+      function openWebsite(url) {
+        if (url) {
+          window.open(url, "_blank"); // Opens the website in a new tab
+        }
+      }
+      
       function openterms(){
         const termsWindow = window.open(
           "terms.html", 
@@ -309,6 +324,9 @@
         // Empty input
         alert("Please enter a valid email address to subscribe.");
       }
+
+   
+
     }, 2000); // 2000ms = 2 seconds
   };
 

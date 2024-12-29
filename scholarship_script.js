@@ -43,3 +43,17 @@ function calculateScholarship() {
 }
 
 
+// Function to validate individual fields
+function validateMarks(field) {
+    const value = field.value.trim();
+    const errorSpan = document.getElementById(`${field.id}Error`);
+
+    // Check if the field is empty or not in the valid range
+    if (!value || isNaN(value) || value < 0 || value > 100) {
+        errorSpan.textContent = `${field.name} must be between 0 and 100!`;
+        errorSpan.style.color = "red"; // Display the message in red
+        field.focus(); // Set focus back to the invalid field
+    } else {
+        errorSpan.textContent = ""; // Clear the error message if valid
+    }
+}
