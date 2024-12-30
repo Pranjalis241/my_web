@@ -42,6 +42,19 @@ function calculateScholarship() {
     }
 }
 
+function openterms(event) {
+    event.preventDefault(); // Prevents the link from navigating
+    const termsWindow = window.open(
+        "terms.html",
+        "Terms",
+        "width=500,height=300"
+    );
+    termsWindow.focus();
+}
+window.onload = function() {  
+    const termsLink = document.getElementById('termsLink');
+    termsLink.addEventListener('click', openterms);
+}
 
 // Function to validate individual fields
 function validateMarks(field) {

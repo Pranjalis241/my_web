@@ -53,7 +53,14 @@ button:hover {
     text-align: center;
     color: #333;
 }
-
+a {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+a:hover {
+    color: darkred;
+}
 .error {
     color: red;
     font-size: 0.9em;
