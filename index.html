@@ -309,26 +309,38 @@
 
 
      // Show the subscription prompt after 2 seconds
-  window.onload = function () {
-    setTimeout(function () {
-      // Show a prompt for the email
-      const email = prompt("Subscribe to our LVC! Enter your email address to stay updated:");
-      
-      // Check if the user entered an email
-      if (email) {
-        alert(`Thank you for subscribing with ${email}!`);
-      } else if (email === null) {
-        // User clicked "Cancel"
-        console.log("User cancelled the subscription prompt.");
-      } else {
-        // Empty input
-        alert("Please enter a valid email address to subscribe.");
-      }
-
-   
-
-    }, 2000); // 2000ms = 2 seconds
+     window.onload = function () {
+      setTimeout(function () {
+          let email;
+          let isValidEmail = false;
+  
+          while (!isValidEmail) {
+              // Show a prompt for the email
+              email = prompt("Subscribe to our LVC! Enter your email address to stay updated:");
+  
+              if (email === null) {
+                  // User clicked "Cancel"
+                  console.log("User cancelled the subscription prompt.");
+                  return; // Exit the loop and function
+              } else if (email.trim() === "") {
+                  // Empty input
+                  alert("Please enter a valid email address to subscribe.");
+              } else {
+                  // Regular expression for email validation
+                  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;   //Match any character except whitespace (\s) and the @ symbol.
+  
+                  if (emailRegex.test(email)) {
+                      isValidEmail = true; // Exit the loop
+                      alert(`Thank you for subscribing with ${email}!`);
+                  } else {
+                      alert("Invalid email address. Please enter a valid email to subscribe.");
+                  }
+              }
+          }
+      }, 2000); // 2000ms = 2 seconds
   };
+  
+  
 
 
 
