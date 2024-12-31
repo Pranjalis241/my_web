@@ -33,6 +33,10 @@
         .carousel img{
           height: 40vh;
         }
+        .dropdown-item:hover {
+          background-color: #007bff; /* Change this to your desired color */
+          color: white;  /* Change text color */
+      }
 
   </style>
     
@@ -277,14 +281,14 @@
     
  
     <script>
-      function navigateToCourses(event) {
+     /* function navigateToCourses(event) {
         // Prevent default behavior of the dropdown toggle
         if (!event.target.parentElement.classList.contains("dropdown-menu")) {
           event.preventDefault();
           const iframe = document.querySelector('iframe[name="content-frame"]');
           iframe.src = "courses.html";
         }
-      }
+      }  */
 
       function openWebsite(url) {
         if (url) {

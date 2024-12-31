@@ -6,7 +6,7 @@ body {
 }
 
 .scholarship-form {
-    max-width: 400px;
+    max-width: 500px;
     margin: auto;
     background:white;
     padding: 20px;
@@ -74,12 +74,12 @@ a:hover {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(100%); /* Adjust the distance you want */
+        transform: translateX(150%); /* Adjust the distance you want */
     }
 }
 
 /* Apply animation to the link */
 #termsLink {
     display: inline-block;
-    animation: slide 5s linear infinite; /* Adjust the timing (5s) as needed */
+    animation: slide 6s linear infinite; /* Adjust the timing (5s) as needed */
 }

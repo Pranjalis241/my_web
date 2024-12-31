@@ -19,8 +19,9 @@
             display: flex;
             align-items: flex-start; /* Align text and image at the top */
             gap: 20px; /* Space between text and image */
+           
         }
-
+      
         .content img {
             max-width: 450px; /* Adjust the image size */
             height: auto; /* Maintain aspect ratio */
@@ -34,7 +35,7 @@
 
         .enroll-button {
             display: inline-block;
-            background-color: #4CAF50; /* Green background */
+            background-color: #0fb315;; /* Green background */
             color: white; /* White text */
             padding: 10px 20px; /* Padding inside the button */
             font-size: 18px; /* Font size */
@@ -46,7 +47,7 @@
         }
 
         .enroll-button:hover {
-            background-color: #45a049; /* Slightly darker green on hover */
+            background-color: #033805; /* Slightly darker green on hover */
         }
 
         .fee {
@@ -56,6 +57,22 @@
             font-weight: bold;
            
         }
+        /* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack the text and image vertically */
+        align-items: center; /* Center the items */
+    }
+
+    .content img {
+        max-width: 100%; /* Make the image responsive */
+        margin-top: 20px; /* Space between text and image */
+    }
+    
+    .content div {
+        width: 100%; /* Ensure the text block takes full width */
+    }
+}
     </style>
 </head>
 <body>
@@ -76,7 +93,7 @@
     </div>
     <div class="enroll-section">
         <a href="#" class="enroll-button">Enroll Now</a>
-        <p class="fee">Fee: Rs. 4999 Only</p>
+        <p class="fee">Fee: Rs. 4599 Only</p>
     </div>
 </body>
 </html>

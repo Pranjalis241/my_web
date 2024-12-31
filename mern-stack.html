@@ -35,7 +35,7 @@
     
             .enroll-button {
                 display: inline-block;
-                background-color: #4CAF50; /* Green background */
+                background-color: #0fb315;; /* Green background */
                 color: white; /* White text */
                 padding: 10px 20px; /* Padding inside the button */
                 font-size: 18px; /* Font size */
@@ -47,7 +47,7 @@
             }
     
             .enroll-button:hover {
-                background-color: #45a049; /* Slightly darker green on hover */
+                background-color: #033805; /* Slightly darker green on hover */
             }
     
             .fee {
@@ -57,6 +57,22 @@
                 font-weight: bold;
                
             }
+            /* Media Query for Smaller Screens (Phone) */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Stack the text and image vertically on smaller screens */
+        align-items: center; /* Center the items */
+    }
+
+    .content img {
+        max-width: 100%; /* Make the image responsive */
+        margin-top: 20px; /* Add space between the text and the image */
+    }
+
+    .content div {
+        width: 100%; /* Ensure the text block takes full width */
+    }
+}
     </style>
 </head>
 <body style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">

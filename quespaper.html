@@ -14,14 +14,26 @@
       margin: auto;
       border: 5px solid #000;
       padding: 20px;
+      padding-top: 10px;
       background-color: white;
     }
     h2 {
       text-align: center;
+      margin-top: 10px; /* Adjust the top margin */
+      margin-bottom: 10px; 
+    
+      text-shadow: 2px 2px 5px rgb(126, 102, 236);
+
     }
     .question {
       margin-bottom: 20px;
     }
+    .marks {
+      text-align: right; /* Align text to the right */
+      margin-right: 0; /* Ensure it stays close to the right edge */
+     
+    }
+    
     .btn {
       display: inline-block;
       margin-top: 20px;
@@ -42,49 +54,53 @@
       color: red;
       font-weight: bold;
     }
+
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>Online Examination</h2>
-    <p>2 Marks Each</p>
+    <h2>Practise paper</h2>
+    <p class="marks">Total marks:<b>10</b> (2 marks each)</p>
+
     <form id="quizForm">
       <div class="question">
-        <p>1. HTML is for creating:</p>
+        <p><b>1. HTML is for creating:</b></p>
         <label><input type="radio" name="q1" value="0"> Dynamic Page</label><br>
         <label><input type="radio" name="q1" value="2"> Static Page</label><br>
         <label><input type="radio" name="q1" value="0"> Both</label><br>
         <label><input type="radio" name="q1" value="0"> None of the above</label><br>
       </div>
       <div class="question">
-        <p>2. CSS is used for:</p>
+        <p><b>2. CSS is used for:</b></p>
         <label><input type="radio" name="q2" value="0"> Functionality</label><br>
         <label><input type="radio" name="q2" value="2"> Styling</label><br>
         <label><input type="radio" name="q2" value="0"> Backend</label><br>
         <label><input type="radio" name="q2" value="0"> None of the above</label><br>
       </div>
       <div class="question">
-        <p>3. JavaScript is used for:</p>
+        <p><b>3. JavaScript is used for:</b></p>
         <label><input type="radio" name="q3" value="2"> Dynamic Pages</label><br>
         <label><input type="radio" name="q3" value="0"> Styling</label><br>
         <label><input type="radio" name="q3" value="0"> Database</label><br>
         <label><input type="radio" name="q3" value="0"> None of the above</label><br>
       </div>
       <div class="question">
-        <p>4. Python is:</p>
+        <p><b>4. Python is:</b></p>
         <label><input type="radio" name="q4" value="0"> Low-level language</label><br>
         <label><input type="radio" name="q4" value="2"> High-level language</label><br>
         <label><input type="radio" name="q4" value="0"> Assembly</label><br>
         <label><input type="radio" name="q4" value="0"> None of the above</label><br>
       </div>
       <div class="question">
-        <p>5. SQL is used for:</p>
+        <p><b>5. SQL is used for:</b></p>
         <label><input type="radio" name="q5" value="0"> Frontend</label><br>
         <label><input type="radio" name="q5" value="2"> Database</label><br>
         <label><input type="radio" name="q5" value="0"> Styling</label><br>
         <label><input type="radio" name="q5" value="0"> None of the above</label><br>
       </div>
+      <div style="text-align: center;">
       <button type="button" class="btn" onclick="calculateMarks()">Your Marks</button>
+      </div>
     </form>
   </div>
 
