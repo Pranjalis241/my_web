@@ -4,13 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gen AI</title>
+    <style>
+    
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                         'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-shadow: 5px 2px 5px rgb(80, 109, 187);
+        }
+
+        .content {
+            display: flex;
+            align-items: flex-start; /* Align text and image at the top */
+            gap: 20px; /* Space between text and image */
+        }
+
+        .content img {
+            max-width: 300px; /* Adjust the image size */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #ccc; /* Optional styling */
+            border-radius: 10px; /* Optional rounded corners */
+        }
+        .enroll-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .enroll-button {
+            display: inline-block;
+            background-color: #4CAF50; /* Green background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding inside the button */
+            font-size: 18px; /* Font size */
+            font-weight: bold;
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            text-decoration: none; /* Remove underline for links */
+        }
+
+        .enroll-button:hover {
+            background-color: #45a049; /* Slightly darker green on hover */
+        }
+
+        .fee {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #4f6e04;
+            font-weight: bold;
+           
+        }
+    </style>
   </head>
-  <body style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
-    <h1>Gen AI</h1>
+  <body>
+    <h1 style=" text-shadow: 5px 2px 5px rgb(47, 101, 151);">Gen AI</h1>
+  <div class="content">
+    <div>
     <p>
-      Gen AI focuses on the advancements in generative artificial intelligence,
-      including machine learning techniques, neural networks, and other AI
-      methodologies.
+      Gen AI focuses on the advancements in generative artificial intelligence to produce text,images and other data.
     </p>
     <p>Key areas of focus:</p>
     <ul>
@@ -20,5 +74,12 @@
       <li><strong>AI</strong> tools for creating content and solving complex problems.</li>
     </ul>
     <p>Explore the future of AI and its transformative potential!</p>
-  </body>
+    </div>
+   <img src="gen.jpg" alt="GEN AI">
+ </div>
+<div class="enroll-section">
+  <a href="#" class="enroll-button">Enroll Now</a>
+  <p class="fee">Fee: Rs. 4999 Only</p>
+</div>
+</body>
 </html>
