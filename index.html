@@ -32,7 +32,7 @@
           background-color: #007bff; /* Change this to your desired color */
           color: white;  /* Change text color */
       }
-
+      
   </style>
     
   </head>
@@ -93,8 +93,8 @@
             <li><a href="home.html" target="content-frame">Home</a></li>
             <ul class="navbar-nav ">
               <li class="nav-item dropdown" style="color: black;">
-                  <a href="courses.html" class="nav-link dropdown-toggle" target="content-frame" role="button" data-bs-toggle="dropdown"
-                      aria-expanded="false"   onclick="navigateToCourses(event)">
+                  <a href="#" class="nav-link dropdown-toggle" target="content-frame" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false"  >
                       All Courses
                   </a>
                   <ul class="dropdown-menu">
@@ -259,7 +259,33 @@
             <p>Website Designed & Developed By: Pranjali Singh</p>
             <p>Your Company Name. All Rights Reserved</p>
             <p>Follow us on :   <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-twitter"></i> <i class="fa-brands fa-square-instagram"></i> <i class="fa-brands fa-linkedin"></i> </p>
-           <br>
+           
+
+     <!-- Subscribe Now Button -->
+<!-- Subscribe Now Button -->
+<button id="subscribeNowButton" style="background-color: #103c6b; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;" 
+        onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#103c6b'">
+    SUBSCRIBE NOW
+</button>
+
+
+<!-- Subscription Modal -->
+<div id="subscriptionModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000; background: white; padding: 20px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); border-radius: 8px; max-width: 400px; text-align: center;">
+  <!-- Visible Heading -->
+  <h2 style="color: #333; font-size: 24px; font-weight: bold; margin-bottom: 10px;">Subscribe to Our LVC!</h2>
+  <p style="color: #555; font-size: 16px; margin-bottom: 20px;">Enter your email address to stay updated:</p>
+  <input type="email" id="emailInput" placeholder="Your email address" style="padding: 10px; width: 100%; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+  <button id="subscribeButton" style="background-color: #1d4672; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;"  onmouseover="this.style.backgroundColor='#218838'" onmouseout="this.style.backgroundColor='#1d4672'">Subscribe</button>
+  <button id="closeModalButton" style="background-color: #dc3545; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;"
+  onmouseover="this.style.backgroundColor='#c82333'" onmouseout="this.style.backgroundColor='#dc3545'">
+Cancel
+</button>
+</div>
+
+<!-- Overlay -->
+<div id="overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+<br>
+<br>
            <label for="reference-websites">LVC Reference Websites: </label>
            <select id="reference-websites" onchange="openWebsite(this.value)">
              <option value="">-- Select a Website --</option>
@@ -302,7 +328,49 @@
       }
 
    
-
+      window.onload = function () {
+        const subscribeNowButton = document.getElementById('subscribeNowButton');
+        const modal = document.getElementById('subscriptionModal');
+        const overlay = document.getElementById('overlay');
+        const subscribeButton = document.getElementById('subscribeButton');
+        const closeModalButton = document.getElementById('closeModalButton');
+        const emailInput = document.getElementById('emailInput');
+    
+        // Show the modal when "Subscribe Now" button is clicked
+        subscribeNowButton.addEventListener('click', function () {
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+    
+        // Subscribe button functionality
+        subscribeButton.addEventListener('click', function () {
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+            if (email === '') {
+                alert('Please enter an email address.');
+            } else if (!emailRegex.test(email)) {
+                alert('Invalid email address. Please try again.');
+            } else {
+                alert(`Thank you for subscribing with ${email}!`);
+                modal.style.display = 'none';
+                overlay.style.display = 'none';
+            }
+        });
+    
+        // Close button functionality
+        closeModalButton.addEventListener('click', function () {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+    
+        // Close modal by clicking on the overlay
+        overlay.addEventListener('click', function () {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+    };
+    
 
      // Show the subscription prompt after 2 seconds
     /* window.onload = function () {
